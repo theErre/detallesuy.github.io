@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css' ) }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/carousel.css' ) }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='js/header.js' ) }}"></script>
+    <title>Pequeño Detalle</title>
+</head>
+
+<body>
+    <header>
+        <img src="/static/img/logo.JPG">
+		<div class="menu_bar">
+			<label class="bt-menu">Menu</label>
+		</div>
+
+		<nav>
+			<ul>
+				<li><a href="/">Inicio</a></li>
+                <li><a href="/cajitas">Cajitas</a></li>
+                <li><a href="/banderines">Banderines</a></li>
+				<li class="submenu">
+                    <label>Piniatas</label>
+                    <ul class="children">
+                        <li><a href="#">Sub elemento #1</a></li>
+                        <li><a href="#">Sub elemento #2</a></li>
+                        <li><a href="#">Sub elemento #3</a></li>
+                    </ul>
+                </li>
+                <li><a href="/letras">Letras</a></li>
+                <li><a href="/centros_mesa">Centros de Mesa</a></li>
+                <li><a href="/marcos">Marcos</a></li>
+                <li><a href="/souvenirs">Souvenirs</a></li>
+                <li><a href="/gigantografias">Gigantografias</a></li>
+                <li><a href="/flores">Flores</a></li>
+			</ul>
+		</nav>
+	</header>
+    <main class="contenido">
+        {% block contenido %} {% endblock %}
+    </main>
+    <footer>Created By: 2021</footer>
+    <script src="{{ url_for('static', filename='js/animation.js' ) }}"></script>
+</body>
+
+</html>
